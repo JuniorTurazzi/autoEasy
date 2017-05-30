@@ -1,0 +1,34 @@
+<ion-view>
+    <ion-nav-bar class="ion-nav-bar bar-calm">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-title align="center">Lista de Veículos</ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button ng-click="abrirCadastro()">
+                <i class="icon ion-plus" border="none"></i>
+            </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="card h3">
+            <div class="item item-text-wrap" ng-repeat="carro in listaCarros">
+                <div class="row">
+                    <div class="col col-60">
+                        Nome do Veículo: <br>{{carro.nome}}
+                    </div>
+                    <div class="col col-40">
+                        Modelo: <br>{{carro.modelo}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-60">
+                        Ano: <br>{{carro.ano}}
+                    </div>
+                    <div class="col col-100">
+                        Combustível:<br>{{carro.tipoCombustivel}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

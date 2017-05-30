@@ -1,0 +1,43 @@
+<ion-view>
+    <ion-nav-bar class="ion-nav-bar bar-assertive">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-title align="center">Abastecimento</ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button ng-click="abrirAbastecimento()">
+                <i class="icon ion-plus" border="none"></i>
+            </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="card h3" >
+             <div class="item item-text-wrap" ng-repeat="abs in listaAbastecimentos">
+                <div class="row">
+                    <div class="col col-60">
+                        Data:<br> {{ abs.data | date: 'dd/MM/yyyy' }}
+                    </div>
+                    <div class="col col-40">
+                        Tipo:<br>{{abs.tipo}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-60">
+                        Odômetro:<br>{{abs.odometro}} km
+                    </div>
+                    <div class="col col-40">
+                        Litros:<br>{{abs.litros}} l
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-60">
+                        Média:<br> {{abs.media}} km/l
+                    </div>
+                    <div class="col col-40">
+                        Total:<br> R$ {{abs.total}}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

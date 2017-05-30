@@ -1,0 +1,104 @@
+<ion-view>
+    <ion-nav-bar class="ion-nav-bar bar-assertive">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-nav-title align="center">Abastecimento</ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button ng-click="salvarAbastecimento(abastecimento)">
+                <i class="icon ion-checkmark" border="none"></i>
+            </button>
+    </ion-nav-buttons>
+    <ion-content  style="height: 100%;">
+        <ul class="list">
+
+            <li class="item item-icon-left">
+                <i class="icon ion-calendar"></i>
+                <div class="placeholders">
+                    <input type="date" ng-model="abastecimento.data" />
+                </div>
+            </li>
+
+            <li class="item item-icon-left">
+                <i class="icon ion-speedometer"></i>
+                <div class="placeholders">
+                    <input type="number" placeholder="Odômetro(km)" ng-model="abastecimento.odometro" />
+                </div>
+            </li>
+
+            <!--*********************************************-->
+
+            <li class="item">
+                <div class="row">
+                    <div class="col col-10">
+                        <i class="icon icon-jaci">         
+                           <img src="assets/fuel.png" width="25" height="25"/>      
+                        </i>
+                    </div>
+                    <div class=" col col-60" style="padding-right:0px;">
+                        <select id="soflow" ng-model="abastecimento.tipo">
+                            <option selected>Tipo de Combustível</option>
+                            <option>Gasolina</option>
+                            <option>Alcool</option>
+                            <option>Diesel</option>
+                        </select>
+                    </div>
+                </div>
+            </li>
+
+            <li class="item">
+                <div class="row">
+                    <div class="col col-10 icon-jaci pad-top">
+                        <i class="icon">
+                         <img src="assets/full_fuel.png" width="25" height="25"/>  
+                        </i>
+                    </div>
+                    <div class="col ">
+                        <ion-checkbox class="item-checkbox-right borda" ng-model="abastecimento.tanqueCheio">
+                            <h3>Está Completando o Tanque?</h3>
+                        </ion-checkbox>
+                    </div>
+                </div>
+            </li>
+
+            <li class="item">
+                <div class="row">
+                    <div class="col col-10 icon-jaci">
+                        <i class="icon ion-social-usd-outline"></i>
+                    </div>
+                    <div class="col col-20">
+                        <input type="number" placeholder="Preço(L)" ng-model="abastecimento.preco">
+                    </div>
+                    <div class="col col-30 placeholders">
+                        <input type="number" placeholder="Valor Total" ng-model="abastecimento.total">
+                    </div>
+                    <div class="col col-25">
+                        <input type="number" placeholder="Litros" ng-model="abastecimento.litros">
+                    </div>
+                </div>
+            </li>
+
+            <li class="item">
+                <div class="row">
+                    <div class="icon-jaci pad-top">
+                        <i class="icon"></i>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <ion-checkbox class="item-checkbox-right borda" ng-model="abastecimento.absAnterior">
+                            <h3>Abastecimento Anterior em Falta?</h3>
+                        </ion-checkbox>
+                    </div>
+                </div>
+            </li>
+
+            <li class="item item-icon-left campo-obs ">
+                <br>
+                <i class="icon ion-ios-compose-outline icon-align"></i>
+                <div class="placeholders">
+                    <textarea name="Observação" id="obs" placeholder="Observação" cols="45" rows="5" ng-model="abastecimento.observacao"></textarea>
+                </div>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

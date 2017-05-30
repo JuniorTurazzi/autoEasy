@@ -1,0 +1,76 @@
+<ion-view>
+    <ion-nav-bar class="ion-nav-bar bar-calm">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-title align="center">Despesas</ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button ng-click="salvarDespesa(despesa)">
+                <i class="icon ion-checkmark" border="none" ></i>
+            </button>
+    </ion-nav-buttons>
+    <ion-content>
+
+        <ul class="list">
+            <li class="item item-icon-left">
+                <i class="icon ion-calendar"></i>
+                <div class="placeholders">
+                    <input type="date" ng-model="despesa.data" />
+                </div>
+            </li>
+
+            <li class="item item-icon-left">
+                <i class="icon ion-speedometer"></i>
+                <div class="placeholders">
+                    <input type="number" placeholder="Odômetro(km)" ng-model="despesa.odometro" />
+                </div>
+            </li>
+
+            <li class="item">
+                <div class="row">
+                    <div class="col col-10">
+                        <i class="icon ion-social-usd icon-jaci"> </i>
+                    </div>
+                    <div class=" col col-60" style="padding-left:10px">
+                        <select id="soflow" ng-model="despesa.tipoDespesa">
+                                <option selected>Tipo de Despesa</option>
+                                <option>Estacionamento</option>
+                                <option>LavaCar</option>
+                                <option>Impostos (IPVA/DPVAT)</option>
+                                <option>Seguro</option>
+                            </select>
+                    </div>
+                    <div class="col col-15" style="padding-left:10px">
+                        <input type="number" placeholder="valor" ng-model="despesa.valor" />
+                    </div>
+                </div>
+            </li>
+
+            <li class="item">
+                <div class="row">
+                    <div class="col col-10">
+                        <i class="icon ion-location icon-jaci"></i>
+                    </div>
+                    <div class=" col col-60" style="padding-right:0px;">
+                        <select id="soflow" ng-model="despesa.local">
+                            <option selected>Local da Despesa</option>
+                               <option>Mecânica</option>
+                               <option>Borracharia</option>
+                               <option>Concessionária</option>
+                               <option>AutoCenter</option>
+                        </select>
+                    </div>
+                </div>
+            </li>
+
+            <li class="item item-icon-left campo-obs">
+                <br>
+                <i class="icon ion-ios-compose-outline icon-align"></i>
+                <div class="placeholders">
+                    <!--<input type="text" placeholder="Observação..." ng-model="despesa.observacao" />-->
+                    <textarea name="Observação" id="obs" placeholder="Observação" cols="45" rows="10" ng-model="despesa.observacao"></textarea>
+                </div>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

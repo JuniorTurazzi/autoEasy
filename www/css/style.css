@@ -1,0 +1,197 @@
+
+.campo-obs{
+    height:150px; 
+}
+.icon-align{
+    padding-bottom: 48px;
+}
+
+.pad{
+    padding-top: 5px;
+}
+.padding-left{
+    padding-left: 25px;
+}
+.borda{
+    border: 0px;
+}
+.italico::-webkit-input-placeholder {
+   font-style: italic;
+}
+.italico:-moz-placeholder {
+   font-style: italic;
+}
+.italico::-moz-placeholder {
+   font-style: italic;
+}
+.italico:-ms-input-placeholder {
+    font-style: italic;
+}
+
+.styled-select {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 25px;
+   overflow: hidden;
+   width: 100%;
+}
+
+.styled-select select {
+   background: transparent;
+   border: none;
+   font-size: 10px;
+   height: 25px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 100%;
+}
+
+.styled-select.slate {
+   background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+   height: 15px;
+   width: 10px;
+}
+
+.styled-select.slate select {
+   border: 1px solid #ccc;
+   font-size: 16px;
+   height: 25px;
+   width: 100%;
+}
+
+/* -------------- Rounded Corners */
+.rounded {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+}
+
+.semi-square {
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+}
+
+/* -------------------- Colors: Background */
+.slate   { background-color: #ddd; }
+.green   { background-color: #779126; }
+.blue    { background-color: #3b8ec2; }
+.yellow  { background-color: #eec111; }
+.black   { background-color: #000; }
+
+/* -------------------- Colors: Text */
+.slate select   { color: #000; }
+.green select   { color: #fff; }
+.blue select    { color: #fff; }
+.yellow select  { color: #000; }
+.black select   { color: #fff; }
+
+
+/* -------------------- Select Box Styles: danielneumann.com Method */
+/* -------------------- Source: http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/ */
+#mainselection select {
+   border: 0;
+   color: #EEE;
+   background: transparent;
+   font-size: 1px;
+   font-weight: bold;
+   padding: 2px 10px;
+   width: 20px;
+   *width: 10px;
+   *background: #58B14C;
+   -webkit-appearance: none;
+}
+
+#mainselection {
+   overflow:hidden;
+   width:20px;
+   -moz-border-radius: 9px 9px 9px 9px;
+   -webkit-border-radius: 9px 9px 9px 9px;
+   border-radius: 9px 9px 9px 9px;
+   box-shadow: 1px 1px 11px #330033;
+   background: #58B14C url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 250px center;
+}
+
+
+/* -------------------- Select Box Styles: stackoverflow.com Method */
+/* -------------------- Source: http://stackoverflow.com/a/5809186 */
+select#soflow, select#soflow-color {
+   -webkit-appearance: button;
+   -webkit-border-radius: 2px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+   background-position: 97% center;
+   background-repeat: no-repeat;
+   border: 1px solid #AAA;
+   color: #555;
+   font-size: 12px;
+   /*margin: 20px;*/
+   overflow: hidden;
+   padding: 0px 10px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   height: 25px;
+   width: 100%;
+}
+
+select#soflow-color {
+   color: #fff;
+   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#779126, #779126 40%, #779126);
+   background-color: #779126;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   padding-left: 5px;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////*/
+.botao {
+padding: 4px 11px;
+
+border: 1px solid #ffcc00;
+-moz-border-radius: 8px;
+-webkit-border-radius: 8px;
+border-radius: 8px;
+
+background-color: #ffcc00 !important;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffcc00), color-stop(100%,#ff6600)) !important;
+background: -webkit-linear-gradient(top, #ffcc00, #ff6600) !important;
+background: -moz-linear-gradient(top, #ffcc00, #ff6600) !important;
+background: -ms-linear-gradient(top, #ffcc00, #ff6600) !important;
+background: -o-linear-gradient(top, #ffcc00, #ff6600) !important;
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcc00', endColorstr='#ff6600',GradientType=0 );
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmY2MwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjY2MDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+
+font-family:"Segoe UI";
+font-weight: bold;
+color: #fff;
+text-shadow: 0 1px 0 #666;
+
+box-shadow: inset 0 1px 1px #fff, 0 2px 3px #666;
+cursor:pointer;
+position: relative;
+}
+
+.icon-jaci {
+    position: relative;
+    font-size: 28px;
+    align-self:left;
+}
+
+.item {
+    padding-left: 10px; 
+}
+
+.placeholders{
+    position: relative;
+    text-align: left;
+    padding-left: 45px;
+}
+.pad-top{
+    padding-top: 15px;
+}
+.h3{
+    color: black;
+    font-style: oblique;
+}

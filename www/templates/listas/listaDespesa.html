@@ -1,0 +1,35 @@
+<ion-view>
+    <ion-nav-bar class="ion-nav-bar bar-calm">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-title align="center">Despesas</ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button ng-click="abrirDespesa()">
+                <i class="icon ion-plus" border="none"></i>
+            </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="card h3">
+             <div class="item item-text-wrap" ng-repeat="despesa in listaDespesas">
+                <div class="row">
+                    <div class="col col-60">
+                        Data: <br> {{ despesa.data | date: 'dd/MM/yyyy' }}
+                    </div>
+                    <div class="col col-40">
+                        Odômetro: <br> {{despesa.odometro}} km
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-60">
+                        Tipo: <br>{{despesa.tipoDespesa}}
+                    </div>
+                    <div class="col col-100">
+                        Total: <br>R$ {{despesa.valor}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

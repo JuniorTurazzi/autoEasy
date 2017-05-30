@@ -1,0 +1,93 @@
+<ion-view>
+    <ion-nav-bar class="ion-nav-bar bar-positive">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-nav-title align="center">Cadastro de Veículo</ion-nav-title>
+    <ion-nav-buttons side="right">
+            <button ng-click="salvarCarro(carro)">
+                <i class="icon ion-checkmark" border="none" ></i>
+            </button>
+    </ion-nav-buttons>
+
+    <ion-content>
+        <ul class="list">
+            <li class="item">
+                <div class="row">
+                    <div class="col col-10">
+                        <i class="icon ion-android-car icon-jaci"></i>
+                    </div>
+                    <div class=" col col-60" style="padding-right:0px;">
+                        <select id="soflow" ng-model="carro.tipo">
+                            <option selected value="1"> Tipo do Veículo</option>
+                            <option value="2">Carro</option>
+                            <option value="3">Moto</option>
+                            <option value="4">Outro</option>
+                        </select>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="item item-icon-left">
+                <div class="placeholders">
+                    <input type="text" placeholder="Nome do Veículo" ng-model="carro.nome" />
+                </div>
+                <i class="icon ion-help-circled"></i>
+            </li>
+            <li class="item item-icon-left">
+                <i class="icon ion-ios-pricetag-outline"></i>
+                <div class="placeholders">
+                    <input type="text" placeholder="Modelo" ng-model="carro.modelo" />
+                </div>
+            </li>
+
+            <li class="item item-icon-left">
+                <div class="row">
+                    <div>
+                        <i class="icon">
+                            <img src="assets/plate.png" width="30" height="30" />
+                        </i>
+                    </div>
+                    <div class="col col-70 placeholders">
+                        <input type="text" class="italico" placeholder="Placa *opcional" ng-model="carro.placa" maxlength="7" />
+                    </div>
+                    <div class="col col-30 placeholders">
+                        <input type="number" class="italico" placeholder="Ano" ng-model="carro.ano"> 
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="item">
+                <div class="row">
+                    <div class="col col-10">
+                        <img src="assets/fuel.png" width="25" height="25" />
+                    </div>
+                    <div class=" col col-60" style="padding-left:10px">
+                        <select id="soflow" ng-model="carro.tipoCombustivel">
+                            <option selected value="1">Tipo de Combustível</option>
+                            <option value="2">Gasolina</option>
+                            <option value="3">Álcool</option>
+                            <option value="4">Diesel</option>
+                        </select>
+                    </div>
+                    <div class="col col-15" style="padding-left:10px">
+                        <input type="number" placeholder="Vol.Tanque(L)" ng-model="carro.vol">
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="item item-icon-left campo-obs ">
+                <br>
+                <i class="icon ion-ios-compose-outline icon-align"></i>
+                <div class="placeholders">
+                    <!--<input type="text" placeholder="Observação..." />-->
+                    <textarea name="Observação" id="obs" placeholder="Observação" cols="45" rows="5" ng-model="carro.obs"></textarea>
+                </div>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,34 @@
+<ion-view>
+    <ion-nav-bar class="ion-nav-bar bar-balanced">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-title align="center">Serviços</ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button ng-click="abrirServico()">
+                <i class="icon ion-plus" border="none"></i>
+            </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="card h3">
+             <div class="item item-text-wrap" ng-repeat="servico in listaServicos">
+                <div class="row">
+                    <div class="col col-60">
+                        Data: <br>{{ servico.data | date: 'dd/MM/yyyy' }}
+                    </div>
+                    <div class="col col-40">
+                        Odômetro: <br>{{servico.odometro}} km
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-60">
+                        Tipo: <br> {{servico.tipoServico}}
+                    </div>
+                    <div class="col col-100">
+                        Total: <br>R$ {{servico.valor}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

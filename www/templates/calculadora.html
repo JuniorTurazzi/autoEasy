@@ -1,0 +1,53 @@
+<ion-view>
+    <ion-nav-bar class="ion-nav-bar bar-assertive">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-title align="center">Calculadora AutoEasy</ion-nav-title>
+    <ion-nav-buttons side="right">
+
+    </ion-nav-buttons>
+    <ion-content>
+
+        <div class="list">
+
+            <div class="item item-divider">
+                Calculadora Flex
+            </div>
+
+            <label class="item item-input item-floating-label">
+                    <span class="input-label">Preço da Gasolina Comum</span>
+                    <input type="number" placeholder="Preço da Gasolina Comum" ng-model="$parent.gasolina">
+                </label>
+
+            <label class="item item-input item-floating-label">
+                    <span class="input-label">Preço do Etanol Comum</span>
+                    <input type="number" placeholder="Preço do Etanol Comum" ng-model="$parent.etanol">
+            </label>
+            <button class="button button-block button-balanced" ng-click="melhorComb()">
+                        Calcular!
+                    </button>
+
+            <div class="item item-divider">
+                Calculadora de Consumo
+            </div>
+
+            <label class="item item-input item-floating-label">
+                    <span class="input-label">Distância até o Destino(km)</span>
+                    <input type="number" placeholder="Distância até o Destino(km)" ng-model="$parent.kilometros">
+                </label>
+
+            <label class="item item-input item-floating-label">
+                    <span class="input-label">Preço do Combustível/ litro</span>
+                    <input type="number" placeholder="Preço do Combustível/ litro" ng-model="$parent.precoComb">
+                </label>
+            <label class="item item-input item-floating-label">
+                    <span class="input-label">Média Km/l do veículo</span>
+                    <input type="number" placeholder="Média Km/l do veículo" ng-model="$parent.media">
+                </label>
+            <button class="button button-block button-positive" ng-click="consumo()">
+                        Calcular!
+                    </button>
+        </div>
+    </ion-content>
+</ion-view>
